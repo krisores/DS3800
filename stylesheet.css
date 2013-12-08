@@ -1,0 +1,73 @@
+header {
+	width: 375px;
+	height: 25px;
+	background-color: green;
+	display: table-cell;
+    	vertical-align: middle
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+#headline {
+	text-align: center;
+	font-size: 120%;
+	color: white;
+}
+
+#itemsection {
+	width: 375px;
+}
+
+.itemvalue
+{
+	display: inline-block; 
+	display: inline;
+	margin: 10px;
+}
+
+.totalsection
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+#loginsection {
+	text-align: center;
+}
+
+#registersection {
+	text-align: center;
+}
+
+.loginfield {
+	margin-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 300px;
+	height: 30px;
+}
+
+.signbutton {
+	margin-right: auto;
+	margin-left: auto;
+	width: 100px;
+}
+
+#loginbutton {
+	height: 40px;
+	width: 150px;
+}
+
+.container {
+	background-color: white;
+	width: 375px;
+	height: 600px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	border: solid;
+}
