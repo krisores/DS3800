@@ -49,7 +49,7 @@ function addElement(){
 			var num2 = document.getElementById(newForm.id).value;
 			var sum = parseInt(num1, 10) + parseInt(num2, 10);
 			
-			localStorage.setItem('sum', JSON.stringify(sum));
+			//localStorage.setItem('sum', JSON.stringify(sum));
 			
 
 			document.getElementById(newSum.id).innerHTML = sum;
@@ -62,19 +62,23 @@ function addElement(){
 			
 			
 			
-			var retrievedObject = localStorage.getItem('sum');
+			//var retrievedObject = localStorage.getItem('sum');
 			
-			console.log('sum', JSON.parse(retrievedObject));
+			//console.log('sum', JSON.parse(retrievedObject));
 			
 			
 
 			//currentTotal = isNaN(value) ? 0 : value
-			var newTotal = currentTotal + num2;
-			var newnewTotal = '' + newTotal;
-
+			//var newTotal = currentTotal + num2;
+			//var newnewTotal = '' + newTotal;
+			handlers.getSums()
+			handlers.saveSums(tempTotal);
 			document.getElementById("totalsum").innerHTML = tempTotal;
+			//console.log(handlers.getSums());
 
 			//document.getElementById("totalsum").innerHTML = newTotal;
+
+			//printSum();
 			
 			
 		}
@@ -95,3 +99,36 @@ function addElement(){
 function addMoney(){
 
 }
+
+window.onload = function(){
+	var retrievedData = handlers.getSums();
+	if ([null, undefined].indexOf(retrievedData) === -1) {
+
+		//alert(retrievedData);
+	} else {
+		alert("NO DATA");
+
+	}
+}
+
+var handlers = {
+
+	saveSums : function(sumToSave){
+		localStorage.setItem("ptotal", sumToSave);
+	},
+	getSums : function(){
+		var retrievedSum = localStorage.getItem("ptotal");
+		var saved = JSON.parse(retrievedSum);
+		return saved;
+
+	},
+	clearSums : function() {
+		localStorage.clear();
+		return false;
+	}
+};
+
+window.onload = function(){
+	var savedSums = handlers.getSums
+}
+
