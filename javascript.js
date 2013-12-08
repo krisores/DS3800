@@ -16,7 +16,7 @@ break;
 
 if (valid) {
 alert ("Login was successful");
-window.location = "file:///C:/Users/Kristoffer/Desktop/Teknisk%20innlevering/main.html";
+window.location = "file:///C:/Users/Kristoffer/Desktop/GrensesnittDesign/main.html";
 localStorage.setItem('userName', un);
 return false;
 }
